@@ -4,11 +4,11 @@ import urllib
 import urllib2
 
 print("Downloading Images and Necessary Files")
-stephurl = 'http:stephaniemoyerman.com/wp-content/uploads/2015/06/DSC_07_linkedin.jpg'
+christiano = 'http://cdn.images.express.co.uk/img/dynamic/67/590x/cristiano-ronaldo-553153.jpg'
 rawurl = 'http://raw.githubusercontent.com/Itseez/opencv/master/data/haarcascades/haarcascade_frontalface_alt.xml'
 
-urllib.urlretrieve(stephurl,
- 'in.jpg') 
+urllib.urlretrieve(christiano,
+ '/usr/lib/edison_config_tools/public/DSC_0713_linkedin.jpg') 
 
 urllib.urlretrieve(rawurl, 
 '/usr/lib/edison_config_tools/public/haarcascade_frontalface_alt.xml')
@@ -23,9 +23,9 @@ urllib.urlretrieve(rawurl,
 #with open("/usr/lib/edison_configure_tools/public/haarcascade_frontalface_alt.xml", "wb") as code:
 #	code.wirte(data)
 
-img = cv2.imread('/usr/lib/edison_config_tools/public/in.jpg')
+img = cv2.imread('/usr/lib/edison_config_tools/public/DSC_0713_linkedin.jpg')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')
+faceCascade = cv2.CascadeClassifier('/usr/lib/edison_config_tools/public/haarcascade_frontalface_alt.xml')
 faces = faceCascade.detectMultiScale(gray, scaleFactor=1.1, 
 minNeighbors=5, minSize = (30, 30), flags = cv2.cv.CV_HAAR_SCALE_IMAGE)
 
